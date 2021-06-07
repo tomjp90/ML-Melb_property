@@ -1,0 +1,328 @@
+Suburb,Distance,Crime
+abbotsford,2.5,1053.0
+airport west,13.5,737.0
+albert park,3.3,572.0
+alphington,6.4,209.0
+altona,13.8,613.0
+altona north,11.1,967.0
+armadale,6.3,561.0
+ascot vale,5.9,1271.0
+ashburton,11.0,382.0
+ashwood,12.2,415.0
+avondale heights,10.5,394.0
+balaclava,6.6,532.0
+balwyn,9.7,412.0
+balwyn north,9.2,521.0
+bentleigh,13.0,671.0
+bentleigh east,13.9,832.0
+box hill,13.1,986.0
+braybrook,10.8,939.0
+brighton,11.2,1184.0
+brighton east,10.7,490.0
+brunswick,5.2,2666.0
+brunswick west,5.9,850.0
+bulleen,11.8,358.0
+burwood,11.7,108.0
+camberwell,7.8,1028.0
+canterbury,9.0,213.0
+carlton north,3.2,22.0
+carnegie,11.4,783.0
+caulfield,8.9,326.0
+caulfield north,8.1,548.0
+caulfield south,9.3,420.0
+chadstone,13.6,621.0
+clifton hill,3.4,563.0
+coburg,7.8,2314.0
+coburg north,9.2,964.0
+collingwood,1.6,1764.0
+doncaster,13.9,1122.0
+eaglemont,10.3,169.0
+elsternwick,8.5,573.0
+elwood,7.7,925.0
+essendon,8.0,1211.0
+essendon north,9.4,194.0
+fairfield,5.8,374.0
+fitzroy,1.6,2320.0
+fitzroy north,3.5,35.0
+flemington,4.4,200.0
+footscray,6.4,2453.0
+glen iris,9.2,549.0
+glenroy,13.0,1582.0
+gowanbrae,13.6,77.0
+hadfield,12.1,417.0
+hampton east,14.5,339.0
+hawthorn,4.6,1268.0
+heidelberg heights,10.5,543.0
+heidelberg west,9.4,865.0
+hughesdale,13.0,319.0
+ivanhoe,7.9,656.0
+kealba,15.0,242.0
+keilor east,12.8,119.0
+kensington,4.2,862.0
+kew,5.6,1217.0
+kew east,7.5,187.0
+kooyong,6.2,75.0
+maidstone,9.2,648.0
+malvern,7.4,663.0
+malvern east,11.2,1793.0
+maribyrnong,8.7,1412.0
+melbourne,2.8,15485.0
+middle park,4.1,227.0
+mont albert,11.8,2.0
+moonee ponds,6.9,1169.0
+moorabbin,14.6,931.0
+newport,8.4,669.0
+niddrie,11.2,230.0
+north melbourne,2.3,1370.0
+northcote,5.5,1866.0
+oak park,11.5,276.0
+oakleigh south,14.7,150.0
+parkville,2.6,668.0
+pascoe vale,9.9,910.0
+port melbourne,3.8,152.0
+prahran,4.5,2099.0
+preston,8.8,4841.0
+reservoir,11.2,3527.0
+richmond,2.6,3158.0
+rosanna,11.4,331.0
+seddon,6.6,237.0
+south melbourne,2.1,1746.0
+south yarra,3.3,261.0
+southbank,1.2,2197.0
+spotswood,7.7,243.0
+st kilda,6.1,3515.0
+strathmore,9.7,434.0
+sunshine north,13.3,975.0
+sunshine west,13.5,1045.0
+surrey hills,11.2,253.0
+templestowe lower,13.8,321.0
+thornbury,6.5,1319.0
+toorak,4.6,667.0
+viewbank,13.8,212.0
+watsonia,14.9,448.0
+west melbourne,1.9,705.0
+williamstown,8.0,937.0
+williamstown north,8.9,154.0
+windsor,5.1,15.0
+yallambie,15.0,123.0
+yarraville,7.0,745.0
+aberfeldie,9.1,137.0
+bellfield,9.5,153.0
+brunswick east,4.5,815.0
+burnley,3.5,111.0
+campbellfield,14.5,1399.0
+carlton,1.8,1988.0
+east melbourne,1.5,818.0
+essendon west,9.8,65.0
+fawkner,12.4,64.0
+hawthorn east,7.5,637.0
+heidelberg,10.6,931.0
+ivanhoe east,9.0,110.0
+jacana,14.5,290.0
+kingsbury,12.4,267.0
+kingsville,7.8,152.0
+murrumbeena,12.1,407.0
+ormond,11.8,260.0
+west footscray,8.2,635.0
+albion,13.9,389.0
+brooklyn,10.9,82.0
+glen huntly,10.4,222.0
+oakleigh,14.0,946.0
+ripponlea,7.4,109.0
+cremorne,2.5,260.0
+docklands,1.9,1578.0
+south kingsville,9.1,58.0
+strathmore heights,12.5,50.0
+travancore,5.3,153.0
+caulfield east,9.3,231.0
+seaholme,12.7,94.0
+keilor park,14.5,245.0
+gardenvale,9.8,32.0
+princes hill,3.7,177.0
+bayswater,23.2,977.0
+bayswater north,23.2,669.0
+beaumaris,17.3,274.0
+berwick,35.2,1813.0
+boronia,25.0,1855.0
+briar hill,16.1,71.0
+broadmeadows,14.0,2804.0
+bundoora,12.1,400.0
+burnside heights,14.8,136.0
+burwood east,14.7,515.0
+cairnlea,14.8,348.0
+caroline springs,14.8,909.0
+cheltenham,17.9,152.0
+craigieburn,20.6,2650.0
+cranbourne,34.7,2172.0
+croydon,23.0,1426.0
+dandenong,24.7,5972.0
+dandenong north,24.7,1228.0
+diamond creek,21.8,457.0
+dingley village,22.2,339.0
+doncaster east,14.3,884.0
+donvale,16.1,268.0
+doreen,25.9,15.0
+eltham,18.0,2.0
+epping,19.6,2481.0
+forest hill,15.4,485.0
+frankston,38.0,5780.0
+frankston north,36.9,806.0
+frankston south,38.0,538.0
+gisborne,45.9,327.0
+gladstone park,12.9,369.0
+greensborough,16.1,1043.0
+hallam,32.3,963.0
+healesville,45.2,311.0
+highett,16.0,377.0
+hillside,18.0,47.0
+huntingdale,12.3,96.0
+keilor downs,15.5,465.0
+keilor lodge,15.5,35.0
+keysborough,25.2,1365.0
+kings park,14.0,385.0
+lalor,16.3,1153.0
+lower plenty,14.6,168.0
+melton,31.7,1518.0
+mernda,25.9,986.0
+mill park,17.9,1590.0
+mitcham,17.2,708.0
+montmorency,16.2,249.0
+mordialloc,21.5,617.0
+mount waverley,14.2,1330.0
+narre warren,34.1,2426.0
+nunawading,15.4,3.0
+oakleigh east,12.3,242.0
+parkdale,21.5,389.0
+point cook,14.7,1458.0
+ringwood east,21.3,558.0
+rockbank,23.8,576.0
+rowville,23.5,1299.0
+sandringham,15.2,483.0
+seaford,35.4,1735.0
+skye,34.7,301.0
+south morang,20.5,1057.0
+springvale,20.8,1518.0
+st albans,14.0,2887.0
+sunbury,31.7,2287.0
+tarneit,18.4,1337.0
+taylors hill,18.0,322.0
+taylors lakes,15.5,1148.0
+the basin,27.0,173.0
+thomastown,15.3,1649.0
+truganina,18.4,74.0
+tullamarine,12.9,137.0
+vermont,17.2,6.0
+wantirna,14.7,572.0
+wantirna south,14.7,1599.0
+werribee,14.7,3002.0
+westmeadows,16.5,389.0
+wollert,25.5,472.0
+wyndham vale,27.2,922.0
+black rock,17.3,168.0
+blackburn,13.4,545.0
+blackburn north,13.4,172.0
+bonbeach,27.0,208.0
+carrum,31.2,325.0
+chelsea,27.0,385.0
+clayton,16.7,1127.0
+doveton,28.8,942.0
+ferntree gully,24.8,1332.0
+glen waverley,16.7,1494.0
+greenvale,20.4,576.0
+heathmont,21.3,351.0
+hoppers crossing,18.4,2409.0
+mckinnon,11.4,159.0
+melton south,29.8,1245.0
+melton west,31.7,1337.0
+mentone,20.0,644.0
+mooroolbark,26.5,846.0
+mulgrave,18.8,957.0
+ringwood,19.9,2668.0
+roxburgh park,20.6,1152.0
+seabrook,15.5,180.0
+templestowe,15.5,458.0
+vermont south,17.2,437.0
+warrandyte,21.1,147.0
+watsonia north,14.5,112.0
+wheelers hill,16.7,526.0
+altona meadows,15.5,718.0
+blackburn south,13.4,296.0
+carrum downs,34.9,1371.0
+clayton south,17.5,534.0
+croydon north,23.0,198.0
+langwarrin,41.0,751.0
+noble park,22.7,2259.0
+notting hill,16.7,166.0
+ringwood north,19.9,5.0
+sydenham,18.0,428.0
+albanvale,14.0,233.0
+beaconsfield upper,39.8,52.0
+chelsea heights,27.0,240.0
+dallas,14.0,456.0
+deer park,14.8,1142.0
+eltham north,18.0,29.0
+keilor,14.5,232.0
+meadow heights,17.4,934.0
+mount evelyn,31.6,292.0
+north warrandyte,21.1,29.0
+pakenham,47.3,2599.0
+riddells creek,47.4,93.0
+sandhurst,34.7,79.0
+scoresby,22.2,334.0
+silvan,34.6,50.0
+aspendale,21.5,189.0
+chirnside park,27.1,518.0
+croydon hills,23.0,81.0
+croydon south,23.0,183.0
+derrimut,14.7,429.0
+diggers rest,27.7,21.0
+edithvale,27.0,225.0
+hampton park,33.3,1336.0
+knoxfield,23.3,402.0
+upwey,29.3,183.0
+bacchus marsh,37.5,693.0
+coolaroo,17.4,490.0
+cranbourne north,34.7,964.0
+kilsyth,26.0,52.0
+montrose,28.8,178.0
+aspendale gardens,21.5,159.0
+bullengarook,45.9,15.0
+clarinda,17.5,254.0
+delahey,18.0,300.0
+hurstbridge,26.1,110.0
+kurunjang,31.7,492.0
+wonga park,25.2,70.0
+endeavour hills,28.5,993.0
+mickleham,20.6,322.0
+officer,43.3,539.0
+waterways,21.5,58.0
+ardeer,12.8,260.0
+beaconsfield,39.0,298.0
+springvale south,22.2,518.0
+yarra glen,31.4,115.0
+brookfield,29.8,404.0
+emerald,36.9,178.0
+whittlesea,35.5,279.0
+burnside,14.8,172.0
+attwood,16.5,90.0
+wallan,44.2,753.0
+new gisborne,48.1,68.0
+plumpton,23.8,197.0
+monbulk,34.1,86.0
+wildwood,31.7,15.0
+plenty,20.1,134.0
+eumemmerring,28.8,231.0
+gisborne south,45.9,31.0
+heatherton,18.7,164.0
+patterson lakes,31.2,403.0
+coldstream,33.0,71.0
+cranbourne west,34.7,681.0
+wattle glen,23.6,30.0
+laverton,15.5,513.0
+wandin north,35.2,80.0
+lysterfield,24.8,174.0
+lilydale,29.9,1091.0
+kalkallo,20.6,112.0
+research,18.0,58.0
+warranwood,19.9,42.0
+werribee south,14.7,205.0
