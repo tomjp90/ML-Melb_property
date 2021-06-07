@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Crime Data</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/assets/img/favicon.png" rel="icon">
+  <link href="../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="/predict">PREDICT NOW</a></h1>
+
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/trends">Market Trends</a></li>
+          <li><a class="nav-link scrollto" href="/team">The Team</a></li>
+          <li class="dropdown"><a href="#"><span>Data Sources</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/source_kaggle">Melbourne House Pricing</a></li>
+              <li><a href="#">Crime</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li>Victorian Crime Data</li>
+        </ol>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <section class="inner-page">
+      <div class="container">
+        <h3>
+              The following table includes a preview of the data used related to <a href="https://discover.data.vic.gov.au/dataset/crime-by-location-data-table"target="_blank">Victorian crime rates</a>.
+            </h3>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+
+          <table border="1" class="dataframe table table-striped table-hover table-borderless">
+            <thead>
+              <tr style="text-align: left;">
+                <th>Suburb</th>
+                <th>Year</th>
+                <th>Number of Crimes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>melbourne</td>
+                <td>2016</td>
+                <td>15485</td>
+              </tr>
+              <tr>
+                <td>east melbourne</td>
+                <td>2016</td>
+                <td>818</td>
+              </tr>
+              <tr>
+                <td>west melbourne</td>
+                <td>2016</td>
+                <td>705</td>
+              </tr>
+              <tr>
+                <td>southbank</td>
+                <td>2016</td>
+                <td>2197</td>
+              </tr>
+              <tr>
+                <td>docklands</td>
+                <td>2016</td>
+                <td>1578</td>
+              </tr>
+              <tr>
+                <td>footscray</td>
+                <td>2016</td>
+                <td>2453</td>
+              </tr>
+              <tr>
+                <td>seddon</td>
+                <td>2016</td>
+                <td>237</td>
+              </tr>
+              <tr>
+                <td>brooklyn</td>
+                <td>2016</td>
+                <td>82</td>
+              </tr>
+              <tr>
+                <td>kingsville</td>
+                <td>2016</td>
+                <td>152</td>
+              </tr>
+              <tr>
+                <td>maidstone</td>
+                <td>2016</td>
+                <td>648</td>
+              </tr>
+              <tr>
+                <td>tottenham</td>
+                <td>2016</td>
+                <td>106</td>
+              </tr>
+              <tr>
+                <td>west footscray</td>
+                <td>2016</td>
+                <td>635</td>
+              </tr>
+              <tr>
+                <td>yarraville</td>
+                <td>2016</td>
+                <td>745</td>
+              </tr>
+              <tr>
+                <td>newport</td>
+                <td>2016</td>
+                <td>669</td>
+              </tr>
+              <tr>
+                <td>south kingsville</td>
+                <td>2016</td>
+                <td>58</td>
+              </tr>
+              <tr>
+                <td>spotswood</td>
+                <td>2016</td>
+                <td>243</td>
+              </tr>
+              <tr>
+                <td>williamstown</td>
+                <td>2016</td>
+                <td>937</td>
+              </tr>
+              <tr>
+                <td>williamstown north</td>
+                <td>2016</td>
+                <td>154</td>
+              </tr>
+              <tr>
+                <td>altona</td>
+                <td>2016</td>
+                <td>613</td>
+              </tr>
+              <tr>
+                <td>seaholme</td>
+                <td>2016</td>
+                <td>94</td>
+              </tr>
+              <tr>
+                <td>braybrook</td>
+                <td>2016</td>
+                <td>939</td>
+              </tr>
+              <tr>
+                <td>albion</td>
+                <td>2016</td>
+                <td>389</td>
+              </tr>
+              <tr>
+                <td>sunshine north</td>
+                <td>2016</td>
+                <td>975</td>
+              </tr>
+              <tr>
+                <td>sunshine west</td>
+                <td>2016</td>
+                <td>1045</td>
+              </tr>
+              <tr>
+                <td>albanvale</td>
+                <td>2016</td>
+                <td>336</td>
+              </tr>
+              <tr>
+                <td>kealba</td>
+                <td>2016</td>
+                <td>242</td>
+              </tr>
+              <tr>
+                <td>kings park</td>
+                <td>2016</td>
+                <td>438</td>
+              </tr>
+              <tr>
+                <td>st albans</td>
+                <td>2016</td>
+                <td>3227</td>
+              </tr>
+              <tr>
+                <td>ardeer</td>
+                <td>2016</td>
+                <td>282</td>
+              </tr>
+              <tr>
+                <td>burnside</td>
+                <td>2016</td>
+                <td>223</td>
+              </tr>
+              <tr>
+                <td>burnside heights</td>
+                <td>2016</td>
+                <td>205</td>
+              </tr>
+              <tr>
+                <td>cairnlea</td>
+                <td>2016</td>
+                <td>441</td>
+              </tr>
+              <tr>
+                <td>caroline springs</td>
+                <td>2016</td>
+                <td>987</td>
+              </tr>
+              <tr>
+                <td>deer park</td>
+                <td>2016</td>
+                <td>1461</td>
+              </tr>
+              <tr>
+                <td>ravenhall</td>
+                <td>2016</td>
+                <td>348</td>
+              </tr>
+              <tr>
+                <td>mambourin</td>
+                <td>2016</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>mount cottrell</td>
+                <td>2016</td>
+                <td>34</td>
+              </tr>
+              <tr>
+                <td>wyndham vale</td>
+                <td>2016</td>
+                <td>1266</td>
+              </tr>
+              <tr>
+                <td>altona north</td>
+                <td>2016</td>
+                <td>967</td>
+              </tr>
+              <tr>
+                <td>laverton north</td>
+                <td>2016</td>
+                <td>487</td>
+              </tr>
+              <tr>
+                <td>altona meadows</td>
+                <td>2016</td>
+                <td>790</td>
+              </tr>
+              <tr>
+                <td>laverton</td>
+                <td>2016</td>
+                <td>601</td>
+              </tr>
+              <tr>
+                <td>seabrook</td>
+                <td>2016</td>
+                <td>151</td>
+              </tr>
+              <tr>
+                <td>hoppers crossing</td>
+                <td>2016</td>
+                <td>2565</td>
+              </tr>
+              <tr>
+                <td>tarneit</td>
+                <td>2016</td>
+                <td>1430</td>
+              </tr>
+              <tr>
+                <td>truganina</td>
+                <td>2016</td>
+                <td>81</td>
+              </tr>
+              <tr>
+                <td>cocoroc</td>
+                <td>2016</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>derrimut</td>
+                <td>2016</td>
+                <td>503</td>
+              </tr>
+              <tr>
+                <td>point cook</td>
+                <td>2016</td>
+                <td>1672</td>
+              </tr>
+              <tr>
+                <td>quandong</td>
+                <td>2016</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>werribee</td>
+                <td>2016</td>
+                <td>3645</td>
+              </tr>
+              <tr>
+                <td>werribee south</td>
+                <td>2016</td>
+                <td>164</td>
+              </tr>
+              <tr>
+                <td>flemington</td>
+                <td>2016</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td>kensington</td>
+                <td>2016</td>
+                <td>862</td>
+              </tr>
+              <tr>
+                <td>ascot vale</td>
+                <td>2016</td>
+                <td>1271</td>
+              </tr>
+              <tr>
+                <td>maribyrnong</td>
+                <td>2016</td>
+                <td>1412</td>
+              </tr>
+              <tr>
+                <td>travancore</td>
+                <td>2016</td>
+                <td>153</td>
+              </tr>
+              <tr>
+                <td>keilor east</td>
+                <td>2016</td>
+                <td>119</td>
+              </tr>
+              <tr>
+                <td>avondale heights</td>
+                <td>2016</td>
+                <td>394</td>
+              </tr>
+              <tr>
+                <td>keilor</td>
+                <td>2016</td>
+                <td>346</td>
+              </tr>
+              <tr>
+                <td>keilor north</td>
+                <td>2016</td>
+                <td>34</td>
+              </tr>
+              <tr>
+                <td>delahey</td>
+                <td>2016</td>
+                <td>378</td>
+              </tr>
+              <tr>
+                <td>hillside</td>
+                <td>2016</td>
+                <td>49</td>
+              </tr>
+              <tr>
+                <td>sydenham</td>
+                <td>2016</td>
+                <td>465</td>
+              </tr>
+              <tr>
+                <td>taylors hill</td>
+                <td>2016</td>
+                <td>400</td>
+              </tr>
+              <tr>
+                <td>keilor downs</td>
+                <td>2016</td>
+                <td>440</td>
+              </tr>
+              <tr>
+                <td>keilor lodge</td>
+                <td>2016</td>
+                <td>44</td>
+              </tr>
+              <tr>
+                <td>taylors lakes</td>
+                <td>2016</td>
+                <td>1159</td>
+              </tr>
+              <tr>
+                <td>moonee ponds</td>
+                <td>2016</td>
+                <td>1169</td>
+              </tr>
+              <tr>
+                <td>aberfeldie</td>
+                <td>2016</td>
+                <td>137</td>
+              </tr>
+              <tr>
+                <td>essendon</td>
+                <td>2016</td>
+                <td>1211</td>
+              </tr>
+              <tr>
+                <td>essendon west</td>
+                <td>2016</td>
+                <td>65</td>
+              </tr>
+              <tr>
+                <td>essendon north</td>
+                <td>2016</td>
+                <td>194</td>
+              </tr>
+              <tr>
+                <td>strathmore</td>
+                <td>2016</td>
+                <td>434</td>
+              </tr>
+              <tr>
+                <td>strathmore heights</td>
+                <td>2016</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>airport west</td>
+                <td>2016</td>
+                <td>737</td>
+              </tr>
+              <tr>
+                <td>keilor park</td>
+                <td>2016</td>
+                <td>245</td>
+              </tr>
+              <tr>
+                <td>niddrie</td>
+                <td>2016</td>
+                <td>230</td>
+              </tr>
+              <tr>
+                <td>gladstone park</td>
+                <td>2016</td>
+                <td>458</td>
+              </tr>
+              <tr>
+                <td>gowanbrae</td>
+                <td>2016</td>
+                <td>77</td>
+              </tr>
+              <tr>
+                <td>tullamarine</td>
+                <td>2016</td>
+                <td>205</td>
+              </tr>
+              <tr>
+                <td>pascoe vale</td>
+                <td>2016</td>
+                <td>910</td>
+              </tr>
+              <tr>
+                <td>pascoe vale south</td>
+                <td>2016</td>
+                <td>487</td>
+              </tr>
+              <tr>
+                <td>melbourne airport</td>
+                <td>2016</td>
+                <td>484</td>
+              </tr>
+              <tr>
+                <td>glenroy</td>
+                <td>2016</td>
+                <td>1582</td>
+              </tr>
+              <tr>
+                <td>hadfield</td>
+                <td>2016</td>
+                <td>417</td>
+              </tr>
+              <tr>
+                <td>oak park</td>
+                <td>2016</td>
+                <td>276</td>
+              </tr>
+              <tr>
+                <td>broadmeadows</td>
+                <td>2016</td>
+                <td>2991</td>
+              </tr>
+              <tr>
+                <td>dallas</td>
+                <td>2016</td>
+                <td>417</td>
+              </tr>
+              <tr>
+                <td>jacana</td>
+                <td>2016</td>
+                <td>290</td>
+              </tr>
+              <tr>
+                <td>coolaroo</td>
+                <td>2016</td>
+                <td>508</td>
+              </tr>
+              <tr>
+                <td>meadow heights</td>
+                <td>2016</td>
+                <td>1053</td>
+              </tr>
+              <tr>
+                <td>attwood</td>
+                <td>2016</td>
+                <td>95</td>
+              </tr>
+              <tr>
+                <td>calder park</td>
+                <td>2016</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>westmeadows</td>
+                <td>2016</td>
+                <td>368</td>
+              </tr>
+              <tr>
+                <td>north melbourne</td>
+                <td>2016</td>
+                <td>1370</td>
+              </tr>
+              <tr>
+                <td>parkville</td>
+                <td>2016</td>
+                <td>668</td>
+              </tr>
+              <tr>
+                <td>carlton</td>
+                <td>2016</td>
+                <td>1988</td>
+              </tr>
+              <tr>
+                <td>carlton north</td>
+                <td>2016</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>princes hill</td>
+                <td>2016</td>
+                <td>177</td>
+              </tr>
+              <tr>
+                <td>brunswick west</td>
+                <td>2016</td>
+                <td>850</td>
+              </tr>
+              <tr>
+                <td>brunswick</td>
+                <td>2016</td>
+                <td>2666</td>
+              </tr>
+              <tr>
+                <td>brunswick east</td>
+                <td>2016</td>
+                <td>815</td>
+              </tr>
+              <tr>
+                <td>coburg</td>
+                <td>2016</td>
+                <td>2314</td>
+              </tr>
+              <tr>
+                <td>coburg north</td>
+                <td>2016</td>
+                <td>964</td>
+              </tr>
+              <tr>
+                <td>greenvale</td>
+                <td>2016</td>
+                <td>709</td>
+              </tr>
+              <tr>
+                <td>fawkner</td>
+                <td>2016</td>
+                <td>64</td>
+              </tr>
+              <tr>
+                <td>campbellfield</td>
+                <td>2016</td>
+                <td>1399</td>
+              </tr>
+              <tr>
+                <td>somerton</td>
+                <td>2016</td>
+                <td>221</td>
+              </tr>
+              <tr>
+                <td>oaklands junction</td>
+                <td>2016</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>yuroke</td>
+                <td>2016</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>craigieburn</td>
+                <td>2016</td>
+                <td>3391</td>
+              </tr>
+              <tr>
+                <td>donnybrook</td>
+                <td>2016</td>
+                <td>34</td>
+              </tr>
+              <tr>
+                <td>kalkallo</td>
+                <td>2016</td>
+                <td>44</td>
+              </tr>
+              <tr>
+                <td>mickleham</td>
+                <td>2016</td>
+                <td>331</td>
+              </tr>
+              <tr>
+                <td>roxburgh park</td>
+                <td>2016</td>
+                <td>1188</td>
+              </tr>
+              <tr>
+                <td>fitzroy</td>
+                <td>2016</td>
+                <td>2320</td>
+              </tr>
+              <tr>
+                <td>collingwood</td>
+                <td>2016</td>
+                <td>1764</td>
+              </tr>
+              <tr>
+                <td>abbotsford</td>
+                <td>2016</td>
+                <td>1053</td>
+              </tr>
+              <tr>
+                <td>clifton hill</td>
+                <td>2016</td>
+                <td>563</td>
+              </tr>
+              <tr>
+                <td>fitzroy north</td>
+                <td>2016</td>
+                <td>35</td>
+              </tr>
+              <tr>
+                <td>northcote</td>
+                <td>2016</td>
+                <td>1866</td>
+              </tr>
+              <tr>
+                <td>thornbury</td>
+                <td>2016</td>
+                <td>1319</td>
+              </tr>
+              <tr>
+                <td>preston</td>
+                <td>2016</td>
+                <td>4841</td>
+              </tr>
+              <tr>
+                <td>reservoir</td>
+                <td>2016</td>
+                <td>3527</td>
+              </tr>
+              <tr>
+                <td>thomastown</td>
+                <td>2016</td>
+                <td>1948</td>
+              </tr>
+              <tr>
+                <td>lalor</td>
+                <td>2016</td>
+                <td>1131</td>
+              </tr>
+              <tr>
+                <td>epping</td>
+                <td>2016</td>
+                <td>2788</td>
+              </tr>
+              <tr>
+                <td>alphington</td>
+                <td>2016</td>
+                <td>209</td>
+              </tr>
+              <tr>
+                <td>fairfield</td>
+                <td>2016</td>
+                <td>374</td>
+              </tr>
+              <tr>
+                <td>ivanhoe</td>
+                <td>2016</td>
+                <td>656</td>
+              </tr>
+              <tr>
+                <td>ivanhoe east</td>
+                <td>2016</td>
+                <td>110</td>
+              </tr>
+              <tr>
+                <td>bellfield</td>
+                <td>2016</td>
+                <td>153</td>
+              </tr>
+              <tr>
+                <td>heidelberg heights</td>
+                <td>2016</td>
+                <td>543</td>
+              </tr>
+              <tr>
+                <td>heidelberg west</td>
+                <td>2016</td>
+                <td>865</td>
+              </tr>
+              <tr>
+                <td>mill park</td>
+                <td>2016</td>
+                <td>1727</td>
+              </tr>
+              <tr>
+                <td>bundoora</td>
+                <td>2016</td>
+                <td>581</td>
+              </tr>
+              <tr>
+                <td>kingsbury</td>
+                <td>2016</td>
+                <td>267</td>
+              </tr>
+              <tr>
+                <td>eaglemont</td>
+                <td>2016</td>
+                <td>169</td>
+              </tr>
+              <tr>
+                <td>heidelberg</td>
+                <td>2016</td>
+                <td>931</td>
+              </tr>
+              <tr>
+                <td>rosanna</td>
+                <td>2016</td>
+                <td>331</td>
+              </tr>
+              <tr>
+                <td>viewbank</td>
+                <td>2016</td>
+                <td>212</td>
+              </tr>
+              <tr>
+                <td>macleod</td>
+                <td>2016</td>
+                <td>282</td>
+              </tr>
+              <tr>
+                <td>yallambie</td>
+                <td>2016</td>
+                <td>123</td>
+              </tr>
+              <tr>
+                <td>watsonia</td>
+                <td>2016</td>
+                <td>448</td>
+              </tr>
+              <tr>
+                <td>watsonia north</td>
+                <td>2016</td>
+                <td>109</td>
+              </tr>
+              <tr>
+                <td>briar hill</td>
+                <td>2016</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>greensborough</td>
+                <td>2016</td>
+                <td>1142</td>
+              </tr>
+              <tr>
+                <td>diamond creek</td>
+                <td>2016</td>
+                <td>534</td>
+              </tr>
+              <tr>
+                <td>plenty</td>
+                <td>2016</td>
+                <td>105</td>
+              </tr>
+              <tr>
+                <td>yarrambat</td>
+                <td>2016</td>
+                <td>77</td>
+              </tr>
+              <tr>
+                <td>lower plenty</td>
+                <td>2016</td>
+                <td>144</td>
+              </tr>
+              <tr>
+                <td>montmorency</td>
+                <td>2016</td>
+                <td>237</td>
+              </tr>
+              <tr>
+                <td>eltham</td>
+                <td>2016</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>eltham north</td>
+                <td>2016</td>
+                <td>49</td>
+              </tr>
+              <tr>
+                <td>research</td>
+                <td>2016</td>
+                <td>61</td>
+              </tr>
+              <tr>
+                <td>wattle glen</td>
+                <td>2016</td>
+                <td>62</td>
+              </tr>
+              <tr>
+                <td>bend of islands</td>
+                <td>2016</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>kangaroo ground</td>
+                <td>2016</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <td>watsons creek</td>
+                <td>2016</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>arthurs creek</td>
+                <td>2016</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>cottles bridge</td>
+                <td>2016</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <td>hurstbridge</td>
+                <td>2016</td>
+                <td>141</td>
+              </tr>
+              <tr>
+                <td>nutfield</td>
+                <td>2016</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>strathewen</td>
+                <td>2016</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>kew</td>
+                <td>2016</td>
+                <td>1217</td>
+              </tr>
+              <tr>
+                <td>kew east</td>
+                <td>2016</td>
+                <td>187</td>
+              </tr>
+              <tr>
+                <td>balwyn</td>
+                <td>2016</td>
+                <td>412</td>
+              </tr>
+              <tr>
+                <td>balwyn north</td>
+                <td>2016</td>
+                <td>521</td>
+              </tr>
+              <tr>
+                <td>bulleen</td>
+                <td>2016</td>
+                <td>358</td>
+              </tr>
+              <tr>
+                <td>templestowe</td>
+                <td>2016</td>
+                <td>425</td>
+              </tr>
+              <tr>
+                <td>templestowe lower</td>
+                <td>2016</td>
+                <td>321</td>
+              </tr>
+              <tr>
+                <td>doncaster</td>
+                <td>2016</td>
+                <td>1122</td>
+              </tr>
+              <tr>
+                <td>doncaster east</td>
+                <td>2016</td>
+                <td>897</td>
+              </tr>
+              <tr>
+                <td>donvale</td>
+                <td>2016</td>
+                <td>285</td>
+              </tr>
+              <tr>
+                <td>north warrandyte</td>
+                <td>2016</td>
+                <td>36</td>
+              </tr>
+              <tr>
+                <td>warrandyte</td>
+                <td>2016</td>
+                <td>158</td>
+              </tr>
+              <tr>
+                <td>park orchards</td>
+                <td>2016</td>
+                <td>99</td>
+              </tr>
+              <tr>
+                <td>wonga park</td>
+                <td>2016</td>
+                <td>55</td>
+              </tr>
+              <tr>
+                <td>chirnside park</td>
+                <td>2016</td>
+                <td>511</td>
+              </tr>
+              <tr>
+                <td>burnley</td>
+                <td>2016</td>
+                <td>111</td>
+              </tr>
+              <tr>
+                <td>cremorne</td>
+                <td>2016</td>
+                <td>260</td>
+              </tr>
+              <tr>
+                <td>richmond</td>
+                <td>2016</td>
+                <td>3158</td>
+              </tr>
+              <tr>
+                <td>hawthorn</td>
+                <td>2016</td>
+                <td>1268</td>
+              </tr>
+              <tr>
+                <td>hawthorn east</td>
+                <td>2016</td>
+                <td>637</td>
+              </tr>
+              <tr>
+                <td>camberwell</td>
+                <td>2016</td>
+                <td>1028</td>
+              </tr>
+              <tr>
+                <td>burwood</td>
+                <td>2016</td>
+                <td>108</td>
+              </tr>
+              <tr>
+                <td>canterbury</td>
+                <td>2016</td>
+                <td>213</td>
+              </tr>
+              <tr>
+                <td>mont albert</td>
+                <td>2016</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>surrey hills</td>
+                <td>2016</td>
+                <td>253</td>
+              </tr>
+              <tr>
+                <td>box hill</td>
+                <td>2016</td>
+                <td>986</td>
+              </tr>
+              <tr>
+                <td>box hill south</td>
+                <td>2016</td>
+                <td>329</td>
+              </tr>
+              <tr>
+                <td>box hill north</td>
+                <td>2016</td>
+                <td>302</td>
+              </tr>
+              <tr>
+                <td>mont albert north</td>
+                <td>2016</td>
+                <td>83</td>
+              </tr>
+              <tr>
+                <td>blackburn</td>
+                <td>2016</td>
+                <td>527</td>
+              </tr>
+              <tr>
+                <td>blackburn north</td>
+                <td>2016</td>
+                <td>136</td>
+              </tr>
+              <tr>
+                <td>blackburn south</td>
+                <td>2016</td>
+                <td>289</td>
+              </tr>
+              <tr>
+                <td>forest hill</td>
+                <td>2016</td>
+                <td>461</td>
+              </tr>
+              <tr>
+                <td>nunawading</td>
+                <td>2016</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>mitcham</td>
+                <td>2016</td>
+                <td>600</td>
+              </tr>
+              <tr>
+                <td>vermont</td>
+                <td>2016</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>vermont south</td>
+                <td>2016</td>
+                <td>336</td>
+              </tr>
+              <tr>
+                <td>ringwood</td>
+                <td>2016</td>
+                <td>2624</td>
+              </tr>
+              <tr>
+                <td>ringwood north</td>
+                <td>2016</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>warrandyte south</td>
+                <td>2016</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>warranwood</td>
+                <td>2016</td>
+                <td>49</td>
+              </tr>
+              <tr>
+                <td>heathmont</td>
+                <td>2016</td>
+                <td>339</td>
+              </tr>
+              <tr>
+                <td>ringwood east</td>
+                <td>2016</td>
+                <td>573</td>
+              </tr>
+              <tr>
+                <td>croydon</td>
+                <td>2016</td>
+                <td>1448</td>
+              </tr>
+              <tr>
+                <td>croydon hills</td>
+                <td>2016</td>
+                <td>99</td>
+              </tr>
+              <tr>
+                <td>croydon north</td>
+                <td>2016</td>
+                <td>190</td>
+              </tr>
+              <tr>
+                <td>croydon south</td>
+                <td>2016</td>
+                <td>205</td>
+              </tr>
+              <tr>
+                <td>kilsyth</td>
+                <td>2016</td>
+                <td>82</td>
+              </tr>
+              <tr>
+                <td>kilsyth south</td>
+                <td>2016</td>
+                <td>99</td>
+              </tr>
+              <tr>
+                <td>mooroolbark</td>
+                <td>2016</td>
+                <td>991</td>
+              </tr>
+              <tr>
+                <td>beenak</td>
+                <td>2016</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>don valley</td>
+                <td>2016</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>hoddles creek</td>
+                <td>2016</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>launching place</td>
+                <td>2016</td>
+                <td>65</td>
+              </tr>
+              <tr>
+                <td>seville</td>
+                <td>2016</td>
+                <td>101</td>
+              </tr>
+              <tr>
+                <td>seville east</td>
+                <td>2016</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <td>wandin east</td>
+                <td>2016</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <td>wandin north</td>
+                <td>2016</td>
+                <td>86</td>
+              </tr>
+              <tr>
+                <td>woori yallock</td>
+                <td>2016</td>
+                <td>91</td>
+              </tr>
+              <tr>
+                <td>yellingbo</td>
+                <td>2016</td>
+                <td>36</td>
+              </tr>
+              <tr>
+                <td>lilydale</td>
+                <td>2016</td>
+                <td>1264</td>
+              </tr>
+              <tr>
+                <td>south yarra</td>
+                <td>2016</td>
+                <td>261</td>
+              </tr>
+              <tr>
+                <td>toorak</td>
+                <td>2016</td>
+                <td>667</td>
+              </tr>
+              <tr>
+                <td>armadale</td>
+                <td>2016</td>
+                <td>561</td>
+              </tr>
+              <tr>
+                <td>kooyong</td>
+                <td>2016</td>
+                <td>75</td>
+              </tr>
+              <tr>
+                <td>malvern</td>
+                <td>2016</td>
+                <td>663</td>
+              </tr>
+              <tr>
+                <td>caulfield east</td>
+                <td>2016</td>
+                <td>231</td>
+              </tr>
+              <tr>
+                <td>malvern east</td>
+                <td>2016</td>
+                <td>1793</td>
+              </tr>
+              <tr>
+                <td>glen iris</td>
+                <td>2016</td>
+                <td>549</td>
+              </tr>
+              <tr>
+                <td>ashburton</td>
+                <td>2016</td>
+                <td>382</td>
+              </tr>
+              <tr>
+                <td>ashwood</td>
+                <td>2016</td>
+                <td>415</td>
+              </tr>
+              <tr>
+                <td>chadstone</td>
+                <td>2016</td>
+                <td>621</td>
+              </tr>
+              <tr>
+                <td>mount waverley</td>
+                <td>2016</td>
+                <td>1109</td>
+              </tr>
+              <tr>
+                <td>glen waverley</td>
+                <td>2016</td>
+                <td>1422</td>
+              </tr>
+              <tr>
+                <td>wheelers hill</td>
+                <td>2016</td>
+                <td>579</td>
+              </tr>
+              <tr>
+                <td>burwood east</td>
+                <td>2016</td>
+                <td>470</td>
+              </tr>
+              <tr>
+                <td>wantirna</td>
+                <td>2016</td>
+                <td>564</td>
+              </tr>
+              <tr>
+                <td>wantirna south</td>
+                <td>2016</td>
+                <td>1328</td>
+              </tr>
+              <tr>
+                <td>bayswater</td>
+                <td>2016</td>
+                <td>955</td>
+              </tr>
+              <tr>
+                <td>bayswater north</td>
+                <td>2016</td>
+                <td>592</td>
+              </tr>
+              <tr>
+                <td>the basin</td>
+                <td>2016</td>
+                <td>181</td>
+              </tr>
+              <tr>
+                <td>boronia</td>
+                <td>2016</td>
+                <td>1563</td>
+              </tr>
+              <tr>
+                <td>ferntree gully</td>
+                <td>2016</td>
+                <td>1173</td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+
+        </div>
+        <div class="col-md-1">
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container footer-bottom clearfix">
+
+      <div class="container">
+        <h3>Monash University Data Analytics Bootcamp 2020 - 2021</h3>
+        <p>Final Project - Anne Wieggers, Catherine Sloan, Danielle Cahill, Joe Quinn and Tom Peddlesden</p>
+        <p>For further information, please refer to our <a href="https://github.com/tomjp90/Final_Project" target="_blank" class="btn-learn-more">GitHub repository.</a></p>
+        </div>
+
+      <div class="copyright">
+        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/assets/vendor/aos/aos.js"></script>
+  <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/assets/js/main.js"></script>
+
+</body>
+
+</html>
