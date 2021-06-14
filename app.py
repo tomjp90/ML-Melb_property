@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, jsonify, request
 import scrape
 from match_csvs import distance_crime, melb_avg, suburbs_by_dist
-from model.persist import load_model, load_model_NL, predict_value, predict_value_NL
+from model.persist import load_model, load_model_NL, predict_value, predict_value_NL, load_model_NC
 from headers import rand_header
 import requests
 from flask import Flask, redirect, url_for, request
@@ -45,6 +45,12 @@ def trends():
       #return index html from home route    
       return render_template("inner-page_trends_template.html", name="default")
 
+@app.route("/decide")
+def decide():
+      #return index html from home route    
+      return render_template("inner-page_decision.html", name="default")
+
+
 # Property Selection route----------------------------------------------------------------------------------------
 @app.route("/select")
 def select():
@@ -55,20 +61,24 @@ def select():
 def predict():
       data = request.json
       print(f"THE DATA {data}")
-      suburbs_match_dist = suburbs_by_dist(int(data["dist_cbd"]))
-      
+      subs_inc = suburbs_by_dist(int(data["dist_cbd"]))
+
+      print(subs_inc["suburbs"])
+      print(subs_inc["avg_inc_dist"])
       # Scale and binary encode features
       current_month = datetime.now().month
-      current_year = datetime.now().year
+      current_year = datetime.now().year 
       current_day =  datetime.now().day 
-      Crime = (1000 - 0) / (15485 - 0)                  
-      Distance = float(data["dist_cbd"][0]) / (50 - 0)
+
+      Crime = (1413 - 0) / (15485 - 0)       #avg crime for all suburbs            
+      Distance = float(data["dist_cbd"]) / (50 - 0)
       Rooms = (float(data["beds"]) - 1) / (12 - 1)
       Bathrooms = (float(data["baths"]) - 0 ) / (9 - 0)
       Cars = (float(data["cars"]) - 0) / (18 - 0)
       Landsize = (float(data["landsize"]) - 0) / (433014 - 0)
       Month = ((current_month - 1) - 0) / (11 - 0)
-      Year = (current_year - 2016)/(2024 - 2016)                
+      Year = (2018 - 2016)/(2018 - 2016)  #XGBoost bad at predicting future values, choose max train value
+      # Binary encode property type              
       if data["prop_type"] == "House":
             Type_h = float(1)
             Type_t = float(0)                     
@@ -82,24 +92,44 @@ def predict():
             Type_t = float(1)                     
             Type_u = float(0)
 
+      
+      #AVERAGE INCREASE FOR SUBURBS FOUND 
+      increase = 1 + float(subs_inc["avg_inc_dist"])
+      print(f"+++++++++++++++++++++ {increase}")
+      percent_inc = 1 + increase/100
+
       # Decide which model to predict on
       if data["landsize"] == 0:
             X = pd.DataFrame([Rooms, Distance, Bathrooms, Cars, Year, Month, Crime, Type_h, Type_t, Type_u],
                               ['Rooms', 'Distance', 'Bathroom', 'Car', 'Year', 'Month', 'Crime', 'Type_h', 'Type_t', 'Type_u']).T
-            model = load_model_NL()  
-            prediction = model.predict(X).tolist()
+            model = load_model_NL() 
+
+            pred_2018 = model.predict(X)[0]
+            pred_2019 = pred_2018 * percent_inc
+            pred_2020 = pred_2019 * percent_inc
+            pred_2021 = (pred_2020 * percent_inc).tolist()
+
 
       elif data["landsize"] != 0:
-            X = pd.DataFrame([Rooms, Distance, Bathrooms, Cars, Landsize, Year, Month, Crime, Type_h, Type_t, Type_u],
-                              ['Rooms', 'Distance', 'Bathroom', 'Car', 'Landsize', 'Year', 'Month', 'Crime', 'Type_h', 'Type_t', 'Type_u']).T
-            model = load_model()  
-            prediction = model.predict(X).tolist()
+            X = pd.DataFrame([Rooms, Distance, Bathrooms, Cars, Landsize, Year, Month, Type_h, Type_t, Type_u],
+                              ['Rooms', 'Distance', 'Bathroom', 'Car', 'Landsize', 'Year', 'Month', 'Type_h', 'Type_t', 'Type_u']).T
+            model = load_model_NC()  
+            pred_2018 = model.predict(X)[0]
+            pred_2019 = pred_2018 * percent_inc
+            pred_2020 = pred_2019 * percent_inc
+            pred_2021 = (pred_2020 * percent_inc).tolist()
       
       # Send result with prediction to JS to show results
-      data = {"result": prediction,
-                  "suburbs": suburbs_match_dist,
+      data = {"result": pred_2021,
+                  "suburbs": subs_inc["suburbs"],
                   'date': [current_day, current_month, current_year],
-                  "dist_cbd": data["dist_cbd"]
+                  "dist_cbd": data["dist_cbd"],
+                  "beds": data["beds"],
+                  "baths": data["baths"],
+                  "cars": data["cars"],
+                  "prop_type": data["prop_type"],
+                  "landsize": data["landsize"],
+                  "dist_inc": increase
                   }
 
       return jsonify(data)
@@ -124,7 +154,7 @@ def login():
                   # ---------------- PROPERTY TYPE CONVERTED -----------
                   
                   # catch all types for apartment/unit/new apartment/flat
-                  # and convert to numerical value
+                  # and convert to BINARY value
                   convert_type = features["ptype"][0]
                   print(f"*************************************THE CONVERTED TYPE is {convert_type}")
                   # If House or Villa-------------------------------
@@ -184,7 +214,7 @@ def login():
                   Bathrooms = (float(features["bathrooms"]) - 0 ) / (9 - 0)
                   Cars = (float(features["cars"]) - 0) / (18 - 0)
                   Month = ((float(features["month"]) - 1) - 0) / (11 - 0)
-                  Year = (float(features["year"])-2016)/(2024 - 2016)                
+                  Year = (2018 - 2016)/(2018 - 2016)                
                   Type_h = float(Type_h)
                   Type_t = float(Type_t)                     
                   Type_u = float(Type_u)  
@@ -205,16 +235,21 @@ def login():
                         X = pd.DataFrame([Rooms, Distance, Bathrooms, Cars, Landsize, Year, Month, Crime, Type_h, Type_t, Type_u], 
                                           ['Rooms', 'Distance', 'Bathroom', 'Car', 'Landsize', 'Year', 'Month', 'Crime', 'Type_h', 'Type_t', 'Type_u']).T
                         model = load_model()
-                        # run predict function from persist                                      
+                        # run predict function from persist FOR 2018!!! XGBoost is bad at predicting the future                                    
                         predict = model.predict(X)[0]
                         # format value predicted
                         prediction_formated = f"{predict:,}"
 
                         # Average % increase for the last 10 year ------------------------------------
                         inc_avg = 1 + (features["suburb_distance_crime"][2])/100
-                        #------- PREDICTED VALUE                                                                     
+
+                        #------- PREDICTED FUTURE VALUE - ADD THIS TO A SEPARATE SCRIPT
+                        #---2019
+                        pred_2019 = round(predict * inc_avg)
+                        #---2020
+                        pred_2020 = round(pred_2019 * inc_avg)                                                                
                         #---2021 
-                        pred_2021 = round(predict)                                   
+                        pred_2021 = round(pred_2020)                                   
                         pred_2021_f = f"{pred_2021:,}" 
                         features["prediction"].append(pred_2021)
                         features["predict_format"].append(pred_2021_f)                                   
@@ -248,16 +283,21 @@ def login():
                                                 ['Rooms', 'Distance', 'Bathroom', 'Car', 'Year', 'Month', 'Crime', 'Type_h', 'Type_t', 'Type_u']).T
                         
                         model = load_model_NL()
-                        # run predict function from persist                                      
+                        # run predict function from persist.py FOR 2018                               
                         predict = model.predict(X)[0]
                         # format value predicted
                         prediction_formated = f"{predict:,}"
 
                         # Average % increase for the last 10 year ------------------------------------
                         inc_avg = 1 + (features["suburb_distance_crime"][2])/100
-                        #------- PREDICTED VALUE                                                                     
+
+                        #------- PREDICTED FUTURE VALUE
+                        #---2019
+                        pred_2019 = round(predict * inc_avg)
+                        #---2020
+                        pred_2020 = round(pred_2019 * inc_avg)                                                                           
                         #---2021 
-                        pred_2021 = round(predict)                                   
+                        pred_2021 = round(pred_2020)                                   
                         pred_2021_f = f"{pred_2021:,}" 
                         features["prediction"].append(pred_2021)
                         features["predict_format"].append(pred_2021_f)                                   
