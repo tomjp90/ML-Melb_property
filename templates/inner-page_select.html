@@ -80,7 +80,7 @@
             <header id="header" class="fixed-top header-inner-pages">
                   <div class="container d-flex align-items-center">
 
-                        <h1 class="logo me-auto"><a href="/predict">PREDICT NOW</a></h1>
+                        <h1 class="logo me-auto"><a href="/decide">PREDICT NOW</a></h1>
                         <nav id="navbar" class="navbar">
                               <ul>
                                     <li><a class="nav-link scrollto " href="/">Home</a></li>
@@ -193,24 +193,27 @@
                                                 </div>
                                           </div>
                                     </div>
+
                         <div class="row">
-                              <div class="col-lg-12 mt-4 ">
-
+                              <div class="col-lg-12 mt-4 text-center">                                    
                                     
-                                    <div class="d-flex vertical-center justify-content-center justify-content-lg-start">
-                                          <a href="/predict" class="btn-get-started scrollto">Select Features!</a>  </div>
-                                    </div>
+                                     <h4> Find a www.domain.com.au listing that matches the suburb for your budget<br> and copy the URL and click next</h4>
+                                          <button id="next" type="button"
+                                          class="btn btn-default"><b><h3>Next</h3></b></button>
+
+                                          
+                                          <script type="text/javascript">
+                                                document.getElementById("next").onclick = function () {
+                                                    location.href = "/predict";
+                                                };
+                                            </script>
+                                    
                               </div>
                               </div>
 
                         </div>
 
                         </div>
-
-                        
-
-
-
 
 
 
