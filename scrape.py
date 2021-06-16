@@ -18,6 +18,7 @@ def scrape_house_listing(url):
       # load chrome driver and browser for scraping
       # executable_path = {'executable_path': "chromedriver.exe"}
       
+      # FURTHER DEVELOPEMENT NEEDED IF TIME PERMITS
       # check if domain or realestate website
       domain = 'domain'
       realestatate = '' 
@@ -38,9 +39,11 @@ def scrape_house_listing(url):
             html_content = requests.get(url, headers=headers)
             html = html_content.text
             soup = bs(html, 'html.parser')
+       
             
             # ---------------------------- FIND CLASS NAMES THAT CHANGE PERIODICALLY -----------------------------------
             address_class = soup.find(attrs={"data-testid": "listing-details__button-copy-wrapper"}).find("h1")["class"][0]
+            print(f"THE ADDRESS CLASS IS  {address_class}")
             pfeatures_class = soup.findAll("span", attrs={"data-testid": "property-features-feature"})[4]["class"][0]
             ptype_class = soup.find(attrs={"data-testid": "listing-summary-property-type"}).find("span")["class"][0]
             img_class = soup.find("picture")["class"][0]
@@ -48,12 +51,13 @@ def scrape_house_listing(url):
 
 #-------------------------------------- SCRAPE PROPERTY FEATURES -------------------------------------------------
             property_features = soup.find_all('span', class_ = pfeatures_class)
+            print(1)
       # BEDS =======================================================================
             bedrooms = property_features[0].find(attrs={"data-testid": "property-features-text-container"}).text.split(' ')[0]
-                  
+            print(2)
       # BATHS ======================================================================
             bathrooms = property_features[1].find(attrs={"data-testid": "property-features-text-container"}).text.split(' ')[0]
-
+            print(3)
       # CARS ========================================================================
             # try and catch when features cannot be scraped
             try:
@@ -62,6 +66,7 @@ def scrape_house_listing(url):
                   cars = "Unknown"
             if '−' in cars:
                   cars = "0"
+            print(3)
             
       # LANDSIZE =====================================================================
             try:
@@ -72,26 +77,26 @@ def scrape_house_listing(url):
                         landsize = landsize[:-3]
             except:
                   landsize = "Unknown"
-
+            print(3)
       # PROPERTY TYPE =================================================================
             try:
                   property_type = soup.findAll('span', class_ = ptype_class)[1].text
             except:
                   property_type = "Unknown" 
-
+            print(3)      
       # ADDRESS =================================================================
             address = soup.find('h1', class_ = address_class).text
-
+            print(3)
       # POSTCODE =================================================================
             postcode = address.split(' ')[-1]
-
+            print(3)
       # STATE ==========================================================================
             state = address.split(' ')[-2]       
-
+            print(3)
 
       # SUBURB ==========================================================================
             # split address around suburb to extract one or two worded suburbs
-            street_types = ["street","Street","avenue","Avenue","Rd,", "rd,","road","Road","st","St","Rd"]
+            street_types = ["street","Street","avenue","Avenue","Rd,", "rd,","road","Road","st","St","Rd","grove","Grove","Grv","grv", "Crescent", "Crst", "Street," ]
             state_names = ["VIC", "NSW", "QLD", "SA", "WA", "NT", "TAS", "ACT"]
             for t in street_types:
                   if t in address:
@@ -129,11 +134,11 @@ def scrape_house_listing(url):
                   "future_predict": [],
                   "future_predict_format": []                          
                   }            
-        
+            print(house_features)
       
       except Exception as e:
             house_features = ""
-            print("THE HOUSE FEATURES ERROR")
+            print("THE HOUSE FEATURES SCRAPE ERROR")
 
       # return dictionary of features
       return house_features

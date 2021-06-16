@@ -146,7 +146,7 @@ def login():
             domain_listing = request.form['nm']
             # run scraping function fro new domain listing url
             features = scrape.scrape_house_listing(domain_listing)
-            print(f"************** SCRAPED FEATURES:{features}")
+            print(f"************** SCRAPED FEATURES: {features}")
             # ------------------------------ PREDICTION ------------------------------------
 
             # Check State only Victoria
@@ -156,7 +156,7 @@ def login():
                   # catch all types for apartment/unit/new apartment/flat
                   # and convert to BINARY value
                   convert_type = features["ptype"][0]
-                  print(f"*************************************THE CONVERTED TYPE is {convert_type}")
+           
                   # If House or Villa-------------------------------
                   if (convert_type == "H"):
                         Type_h = 1
