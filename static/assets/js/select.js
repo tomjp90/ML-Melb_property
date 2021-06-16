@@ -153,9 +153,9 @@ function doPredict() {
 
                   if (suburb.includes(sub_string)) {
                         splitSub = suburb.split(' ').join('+')
-                        HTMLsuburbs.push("<a href=" + url + splitSub + "> " + suburb + "</a>")
+                        HTMLsuburbs.push("<a href=" + url + splitSub + " target='_blank'> " + suburb + "</a>")
                   } else {                  
-                        HTMLsuburbs.push("<a href=" + url + suburb + "> " + suburb + "</a>")
+                        HTMLsuburbs.push("<a href=" + url + suburb + " target='_blank'> " + suburb + "</a>")
                   }
             }
             document.getElementById("suburbs").innerHTML = "<b>Suburbs within <b>" + data.dist_cbd + "</b> ± 1km: </b> <br>" + HTMLsuburbs;
