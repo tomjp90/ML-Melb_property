@@ -9,11 +9,15 @@ The project has been deployed to Heroku and is available here: [https://melb-pro
 
 
 # The Team 
+Lead Author:
+- Tom Peddlesden: https://github.com/tomjp90 
 
+This a branch off my group project. I have considerably improved the functionality in this repositry.
 - Catherine Sloan: https://github.com/catherinesloan
 - Danielle Cahill: https://github.com/dan1ellec
 - Anne Wieggers: https://github.com/annewieggers
-- Tom Peddlesden: https://github.com/tomjp90 
+From [this project](https://github.com/tomjp90/Final_Project)
+
 
 
 # Data Sources 
