@@ -6,6 +6,7 @@ This project utilises Machine Learning to predict Melbourne property prices. It 
 # Deployment
 
 The project has been deployed to Heroku and is available here: [https://melb-property-pridictor.herokuapp.com/](https://melb-property-pridictor.herokuapp.com/).
+This may take a moment to open as the application may go into hibernation.
 
 
 # The Team 
